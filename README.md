@@ -1,0 +1,2 @@
+* devDependencies: Tailwind CSS
+* daisyui

@@ -12,9 +12,9 @@ export default function Navbar() {
       </div>
 
       {/* Search */}
-      <div className="form-control">
-        <input type="text" placeholder="Search" className="input input-bordered" />
-      </div>
+      <div className="self-center">
+             <input type="text" placeholder="  Search for products, brands and more" className="w-72 h-12" />
+        </div>
 
       {/* Search End */}
 

@@ -1,74 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './slider.css';
 
-export default function Slider() {
+export default function Slidertest() {
+  const [slideIndex, setSlideIndex] = useState(1);
+  const [slides, setSlides] = useState([
+    { url: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=600", text: "Caption Text" },
+    { url: "https://images.pexels.com/photos/7120424/pexels-photo-7120424.png?auto=compress&cs=tinysrgb&w=600", text: "Caption Two" },
+    { url: "https://media.istockphoto.com/photos/deep-learning-artificial-intelligence-background-picture-id1310293181?b=1&k=20&m=1310293181&s=612x612&w=0&h=d_4RRKTU-n04JK34npxeY-JCrlQkgAB5g8jz42rPNNc=", text: "Caption Three" }
+  ]);
 
-  let slideIndex = 1;
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
+  function plusSlides(n) {
+    setSlideIndex(slideIndex + n);
+  }
 
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-     
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-      
-        // debugger
-        // slides[slideIndex-1].style.display = "block";  
-        // dots[slideIndex-1].className += " active";
-
-        slides[slideIndex-1].style={display:'block'};  
-        dots[slideIndex-1].className= +{ "active"};
-      }
+  function currentSlide(n) {
+    setSlideIndex(n);
+  }
 
   return (
-<div>
-    
-<div className="slideshow-container">
+    <div className="slideshow-container">
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className="mySlides fade"
+          style={{ display: index === slideIndex - 1 ? "block" : "none" }}
+        >
+          <div className="numbertext">{`${index + 1} / ${slides.length}`}</div>
+          <img src={slide.url} style={{ width: "100%" }} />
+          <div className="text">{slide.text}</div>
+        </div>
+      ))}
+      <a className="prev" onClick={() => plusSlides(-1)}>
+        ❮
+      </a>
+      <a className="next" onClick={() => plusSlides(1)}>
+        ❯
+      </a>
 
-<div className="mySlides fade">
-  <div className="numbertext">1 / 3</div>
-  <img src="img_nature_wide.jpg" style={{width:'100%'}}/>
-  <div className="text">Caption Text</div>
-</div>
+      <br />
 
-<div className="mySlides fade">
-  <div className="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style={{width:'100%'}}/>
-  <div className="text">Caption Two</div>
-</div>
-
-<div className="mySlides fade">
-  <div className="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style={{width:'100%'}}/>
-  <div className="text">Caption Three</div>
-</div>
-
-<a className="prev" onClick={plusSlides(-1)}>❮</a>
-<a className="next" onClick={plusSlides(-1)}>❯</a>
-
-</div>
-<br/>
-
-<div style={{textAlign:"center"}}>
-  <span className="dot" onClick={currentSlide(1)}></span> 
-  <span className="dot" onClick={currentSlide(2)}></span> 
-  <span className="dot" onClick={currentSlide(3)}></span> 
-</div>
- 
-</div>
-  )
+      <div style={{ textAlign: "center" }}>
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === slideIndex - 1 ? "active" : ""}`}
+            onClick={() => currentSlide(index + 1)}
+          ></span>
+        ))}
+      </div>
+    </div>
+  );
 }

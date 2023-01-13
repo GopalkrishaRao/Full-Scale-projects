@@ -2,25 +2,29 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <>
-
-    <div className="navbar bg-base-100">
+    <div>
+    <div className="navbar bg-base-100 flex items-center justify-between bg-blue text-white ">
+      <div>
       <div className="flex-1">
         <a className="btn btn-ghost normal-case text-xl">
            E-cart
         </a>
       </div>
+      </div>
 
       {/* Search */}
+      <div>
       <div className="self-center">
-             <input type="text" placeholder="  Search for products, brands and more" className="w-72 h-12" />
-        </div>
+             <input type="text" placeholder="  Search for products, brands and more" className="w-72 h-12"/>
+            
+      </div>
 
       {/* Search End */}
+      </div>
 
 
 
-      <div className="flex-none">
+      <div>
         
         <div className="dropdown dropdown-end">
           {/* Cart and cart logo */}
@@ -75,7 +79,9 @@ export default function Navbar() {
         </div>
       </div>
     </div>
+
     
-    </>
+    
+    </div>
   )
 }

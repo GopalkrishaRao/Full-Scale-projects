@@ -1,5 +1,9 @@
 import './App.css';
-import ComponetHome from './Components/ComponentHome';
+import Navbar from './Components/Navbar/Navbar';
+import Home from './Components/Home/Home';
+import Footer from './Components/Footer/Footer';
+
+
 
 function App() {
   return (
@@ -7,7 +11,9 @@ function App() {
  
     <h1 className="text-xl">Loading .....</h1>
 
-    <ComponetHome/>
+    <Navbar/>
+    <Home/>
+    <Footer/>
    </>
   );
 }

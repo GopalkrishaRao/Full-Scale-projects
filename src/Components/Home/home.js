@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
     <Slider/>
-    <Products pImg={"https://placeimg.com/400/225/arch"}/>
     <ProductDetails/>
+    <Products pImg={"https://placeimg.com/400/225/arch"}/>
     </>
   )
 };

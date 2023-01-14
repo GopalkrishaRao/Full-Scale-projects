@@ -1,5 +1,5 @@
 import React from 'react'
-import Cart from './Cart'
+import Cart from './Cart and Profile/Cart'
 import Searchbox from './Searchbox'
 
 export default function Navbar() {

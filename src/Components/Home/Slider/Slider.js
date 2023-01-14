@@ -16,7 +16,7 @@ export default function Slidertest() {
   function currentSlide(n) {
     setSlideIndex(n);
   }
-
+  
   return (
     <div className="slideshow-container">
       {slides.map((slide, index) => (

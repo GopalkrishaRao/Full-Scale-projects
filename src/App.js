@@ -8,9 +8,6 @@ import Footer from './Components/Footer/Footer';
 function App() {
   return (
    <>
- 
-    <h1 className="text-xl">Loading .....</h1>
-
     <Navbar/>
     <Home/>
     <Footer/>

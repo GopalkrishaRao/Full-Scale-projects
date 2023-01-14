@@ -1,14 +1,14 @@
 import React from 'react';
-import Card from './Card/Card';
+import Products from './Cards/Products';
 import Slider from './Slider/Slider';
-import ProductDescription from './IndividualProductDetails/ProductDescription';
+import ProductDetails from './IndividualProductDetails/ProductDescription';
 
 export default function Home() {
   return (
     <>
     <Slider/>
-    <Card/>
-    <ProductDescription/>
+    <Products pImg={"https://placeimg.com/400/225/arch"}/>
+    <ProductDetails/>
     </>
   )
 };

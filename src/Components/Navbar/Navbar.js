@@ -4,7 +4,8 @@ import Searchbox from './Searchbox'
 
 export default function Navbar() {
   return (
-    <div>
+    <div className='sticky top-0 	z-index: 1;
+    z-10'>
     <div className="navbar bg-base-100 flex items-center justify-between bg-blue text-white ">
       <div>
       <div className="flex-1 ">

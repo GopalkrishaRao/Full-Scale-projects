@@ -5,7 +5,7 @@ export default function Footer() {
     <>
     <footer className="footer p-10 bg-base-200 text-base-content">
     <div>
-    <img src='../images/logo.png' alt='logo'/>
+    <img src={require('../images/logo.png')} alt='logo' className='h-6 w-24'/>
     <p>E-Cart India Private Ltd.</p>
   </div> 
   <div>

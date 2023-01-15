@@ -30,12 +30,12 @@ export default function Slidertest() {
           <div className="text">{slide.text}</div>
         </div>
       ))}
-      <a className="prev" onClick={() => plusSlides(-1)}>
+      <div className="prev" onClick={() => plusSlides(-1)}>
         ❮
-      </a>
-      <a className="next" onClick={() => plusSlides(1)}>
-        ❯
-      </a>
+      </div>
+      <div className="next" onClick={() => plusSlides(1)}>
+        ❯ 
+      </div>
 
       <br />
 

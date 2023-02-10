@@ -33,7 +33,7 @@ module.exports = {
       'white':'#feebe2',
 
       // back ground and text
-      'black':'#1f1f1ff',
+      'black':'#1f1f1f',
 
       // text
       'gray':'#8787886',

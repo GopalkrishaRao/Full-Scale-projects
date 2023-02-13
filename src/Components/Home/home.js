@@ -8,7 +8,12 @@ export default function Home() {
     <>
     <Slider/>
     <ProductDetails/>
-    <Products pImg={"https://placeimg.com/400/225/arch"}/>
+    <div className='flex gap-5'>
+      <Products pImg={"https://placeimg.com/400/225/arch"}/>
+      <Products pImg={"https://placeimg.com/400/225/arch"}/>
+      <Products pImg={"https://placeimg.com/400/225/arch"}/>
+     
+    </div>
     </>
   )
 };

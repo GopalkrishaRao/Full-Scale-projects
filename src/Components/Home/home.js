@@ -12,7 +12,7 @@ export default function Home() {
       <Products pImg={"https://placeimg.com/400/225/arch"}/>
       <Products pImg={"https://placeimg.com/400/225/arch"}/>
       <Products pImg={"https://placeimg.com/400/225/arch"}/>
-     
+    
     </div>
     </>
   )

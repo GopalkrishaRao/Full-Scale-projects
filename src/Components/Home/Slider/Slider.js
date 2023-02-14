@@ -5,8 +5,7 @@ export default function Slidertest() {
   const [slideIndex, setSlideIndex] = useState(1);
   const [slides, setSlides] = useState([
     { url: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=600", text: "Caption Text" },
-    { url: "https://images.pexels.com/photos/7120424/pexels-photo-7120424.png?auto=compress&cs=tinysrgb&w=600", text: "Caption Two" },
-    { url: "https://media.istockphoto.com/photos/deep-learning-artificial-intelligence-background-picture-id1310293181?b=1&k=20&m=1310293181&s=612x612&w=0&h=d_4RRKTU-n04JK34npxeY-JCrlQkgAB5g8jz42rPNNc=", text: "Caption Three" }
+    { url: "https://images.pexels.com/photos/7120424/pexels-photo-7120424.png?auto=compress&cs=tinysrgb&w=600", text: "Caption Two" }
   ]);
 
   function plusSlides(n) {
@@ -18,7 +17,10 @@ export default function Slidertest() {
   }
   
   return (
-    <div className="slideshow-container">
+    <>
+    <div className="slideshow-container ">
+      {/* slider immage */}
+    <div className=''>
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -26,16 +28,21 @@ export default function Slidertest() {
           style={{ display: index === slideIndex - 1 ? "block" : "none" }}
         >
           <div className="numbertext">{`${index + 1} / ${slides.length}`}</div>
-          <img src={slide.url} style={{ width: "100%" }} />
+          <img src={slide.url} style={{ width: "100%" }} className = 'h-[40vh]' />
           <div className="text">{slide.text}</div>
         </div>
       ))}
-      <div className="prev" onClick={() => plusSlides(-1)}>
+
+      {/* slider arrow */}
+      <div className=''>
+          <div className="prev text-black bg-white" onClick={() => plusSlides(-1)} >
         ❮
+          </div>
+          <div className="next text-black bg-white " onClick={() => plusSlides(1)}>
+         ❯ 
+          </div>
       </div>
-      <div className="next" onClick={() => plusSlides(1)}>
-        ❯ 
-      </div>
+    </div>
 
       <br />
 
@@ -49,5 +56,6 @@ export default function Slidertest() {
         ))}
       </div>
     </div>
+    </>
   );
 }

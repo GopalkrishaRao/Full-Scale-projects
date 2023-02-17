@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Footer() {
+  const year= new Date().getFullYear()
   return (
     <>
     <footer className="footer p-10 bg-base-200 text-base-content">
@@ -50,7 +51,7 @@ export default function Footer() {
 
 <div className="items-center grid-flow-col">
    
-    <p>Copyright © 2023 - All right reserved</p>
+    <p>Copyright © {year} - All right reserved</p>
   </div> 
     </>
   )

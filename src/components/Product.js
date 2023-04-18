@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import FormatPrice from "../Helpers/FormatPrice";
 
 const Products = (curElem) => {
     const {id, name, image, price, category} = curElem;
@@ -13,10 +14,14 @@ const Products = (curElem) => {
             <figcaption className="caption">{category}</figcaption>
         </figure>
 
-    <div className="card-data">
-        <div className="card-data-flex"></div>
+        <div className="card-data">
+        <div className="card-data-flex">
         <h3>{name}</h3>
-        <p className="card-data--price">{price}</p>
+        <p className="card-data--price">
+          {/* Format currency using Intl.Number Format  */}
+         {<FormatPrice price= {price}/>}
+        </p>
+    </div>
     </div>
     </div>
 

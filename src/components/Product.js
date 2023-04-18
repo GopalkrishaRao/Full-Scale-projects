@@ -7,6 +7,7 @@ const Products = (curElem) => {
     const {id, name, image, price, category} = curElem;
 
   return (
+  
   <NavLink to= {`/singleproduct/${id}`}>
     <div className="card">
         <figure>
@@ -14,7 +15,7 @@ const Products = (curElem) => {
             <figcaption className="caption">{category}</figcaption>
         </figure>
 
-        <div className="card-data">
+    <div className="card-data">
         <div className="card-data-flex">
         <h3>{name}</h3>
         <p className="card-data--price">
@@ -25,7 +26,9 @@ const Products = (curElem) => {
     </div>
     </div>
 
-  </NavLink>)
+  </NavLink>
+
+  )
 };
 
 const Wrapper = styled.section`

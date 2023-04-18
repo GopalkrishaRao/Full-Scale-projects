@@ -47,7 +47,6 @@ const getSingleProduct= async(url)=>{
     getProducts(API);
   }, []);
 
-
   return (
     <AppContext.Provider
      value={

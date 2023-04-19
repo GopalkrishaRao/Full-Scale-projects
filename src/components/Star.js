@@ -5,7 +5,6 @@ import styled from "styled-components";
 const Star = ({ stars}) => {
   const ratingStar = Array.from({ length: 5 }, (elem, index) => {
     let number = index + 0.5;
-    // debugger;
     return (
         <>
       <span key={index}>
@@ -26,9 +25,6 @@ const Star = ({ stars}) => {
       <div className="icon-style">
         {ratingStar}
         <p>{stars} Stars </p>
-        
-        {/* <p>({reviews} customer reviews)</p> */}
-
       </div>
     </Wrapper>
   );

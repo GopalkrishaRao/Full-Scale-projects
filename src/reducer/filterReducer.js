@@ -3,14 +3,14 @@ const filterReducer = (state, action)=>{
         case "LOAD_FILTER_PRODUCTS":
             return {
                 ...state,
-                filter_poducts: [...action.payload],
-                all_products: [...action.payload]
+                filter_products: [...action.payload],
+                all_products: [...action.payload],
             };
-        case "SET_GRIDVIEW"  :
-            return {
-                ...state,
-                grid_view: true
-            };
+            case "SET_GRID_VIEW":
+                return {
+                  ...state,
+                  grid_view: true,
+                };
 
         default: 
             return state;

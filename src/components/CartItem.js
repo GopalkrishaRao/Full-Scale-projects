@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import FormatPrice from "../Helpers/FormatPrice";
 import CartAmountToggle from "./CartAmoutToggle";
 import { FaTrash } from "react-icons/fa";
